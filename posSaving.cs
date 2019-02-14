@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿gusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -89,19 +89,4 @@ public class saveHoneyCombs : MonoBehaviour
 
     }
   
-}
-
-[Serializable]
-class dimensionsVector {
-    //Own invented vector3 that is (probably) Serializable
-    public float[,] pos;
-
-    //Own invented Quaternion that is (probably) Serializable
-    public float[,] rotations;
-
-    public dimensionsVector(int totalObj)
-    {
-        rotations = new float[totalObj, 4];
-        pos = new float[totalObj, 3];
-    }
 }
