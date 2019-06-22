@@ -1,11 +1,11 @@
-﻿gusing System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class saveHoneyCombs : MonoBehaviour
+public class posSaving : MonoBehaviour
 {
     GameObject[] getCountOfObjects;
     
@@ -14,28 +14,14 @@ public class saveHoneyCombs : MonoBehaviour
     public string extension;
 
     // Is called before Start
-    void Awake()
-    {
-        load();
-    }
+    void Awake() { load(); }
 
     // Update is called once per frame
-    void Update()
-    {
-        getCountOfObjects = GameObject.FindGameObjectsWithTag(objectName);
-    }
+    void Update(){ getCountOfObjects = GameObject.FindGameObjectsWithTag(objectName); }
 
-    public void save()
-    {
-        writeToFile();
+    public void save(){ writeToFile(); }
 
-    }
-
-    public void load()
-    {
-        loadFromFile();
-
-    }
+    public void load() { loadFromFile(); }
 
     public void writeToFile()
     {
