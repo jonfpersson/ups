@@ -29,10 +29,8 @@ public class posSaving : MonoBehaviour
         FileStream file = File.Create(Application.persistentDataPath + "/" + objectName + "." + extension);
         dimensionsVector dv = new dimensionsVector(getCountOfObjects.Length);
 
-        Debug.Log(getCountOfObjects.Length);
         for (int i = 0; i < getCountOfObjects.Length; i++)
         {
-            //test for loop
             dv.pos[i, 0] = getCountOfObjects[i].transform.localPosition.x;
             dv.pos[i, 1] = getCountOfObjects[i].transform.localPosition.y;
             dv.pos[i, 2] = getCountOfObjects[i].transform.localPosition.z;
@@ -40,7 +38,6 @@ public class posSaving : MonoBehaviour
 
         for (int i = 0; i < getCountOfObjects.Length; i++)
         {
-            //test for loop
             dv.rotations[i, 0] = getCountOfObjects[i].transform.rotations.x;
             dv.rotations[i, 1] = getCountOfObjects[i].transform.rotations.y;
             dv.rotations[i, 2] = getCountOfObjects[i].transform.rotations.z;
